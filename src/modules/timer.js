@@ -24,21 +24,16 @@ const timer = (deadline) => {
       }
     };
 
-    timerDays.forEach((item) => {
-      item.textContent = getZero(getTime.days);
-    });
+    const addTimer = (span, timeKey) => {
+      span.forEach((item) => {
+        item.textContent = getZero(timeKey);
+      });
+    };
 
-    timerHours.forEach((item) => {
-      item.textContent = getZero(getTime.hours);
-    });
-
-    timerMinutes.forEach((item) => {
-      item.textContent = getZero(getTime.minutes);
-    });
-
-    timerSeconds.forEach((item) => {
-      item.textContent = getZero(getTime.seconds);
-    });
+    addTimer(timerDays, getTime.days);
+    addTimer(timerHours, getTime.hours);
+    addTimer(timerMinutes, getTime.minutes);
+    addTimer(timerSeconds, getTime.seconds);
   };
   const startTimer = () => {
     let getTime = getTimeRemaining();
