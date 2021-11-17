@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("timer123ghbdtn123")})();

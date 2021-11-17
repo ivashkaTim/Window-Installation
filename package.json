@@ -1,0 +1,24 @@
+{
+  "name": "middle_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivashkaTim/Diplom_GLO_Academy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivashkaTim/Diplom_GLO_Academy/issues"
+  },
+  "homepage": "https://github.com/ivashkaTim/Diplom_GLO_Academy#readme",
+  "devDependencies": {
+    "webpack": "^5.64.1",
+    "webpack-cli": "^4.9.1"
+  }
+}
