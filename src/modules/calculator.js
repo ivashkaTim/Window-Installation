@@ -29,15 +29,18 @@ const calculator = () => {
       },
     });
   };
-  calcContainer.addEventListener('change', (e) => {
-    if (
-      e.target === calcType ||
-      e.target === calcMaterial ||
-      e.target === calcSquare
-    ) {
-      coutCall();
-    }
-  });
+
+  if (calcContainer) {
+    calcContainer.addEventListener('change', (e) => {
+      if (
+        e.target === calcType ||
+        e.target === calcMaterial ||
+        e.target === calcSquare
+      ) {
+        coutCall();
+      }
+    });
+  }
 };
 
 export default calculator;
