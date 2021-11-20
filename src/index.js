@@ -5,6 +5,7 @@ import sliderServices from './modules/sliderServices';
 import modalCall from './modules/modalCall';
 import servicesModal from './modules/servicesModal';
 import documents from './modules/documents';
+import smoothScroll from './modules/smoothScroll';
 
 timer('25 november 2021');
 calculator();
@@ -13,3 +14,4 @@ sliderServices();
 modalCall();
 servicesModal();
 documents();
+smoothScroll();
