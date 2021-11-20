@@ -4,6 +4,7 @@ const modalCall = () => {
   const btnCall = document.querySelector('.btn-call');
   const modalCall = document.querySelector('.header-modal--opened');
   const overlay = document.querySelector('.overlay');
+  const closeModalBtn = modalCall.querySelector('.header-modal__close');
 
   btnCall.addEventListener('click', (e) => {
     e.preventDefault();
@@ -26,12 +27,14 @@ const modalCall = () => {
     });
   });
 
-  modalCall.addEventListener('click', (e) => {
-    console.log(!e.target.closest('.fancybox-skin'));
-    if (e.target.closest('.header-modal__close')) {
-      overlay.style.display = 'none';
-      modalCall.style.display = 'none';
-    }
+  closeModalBtn.addEventListener('click', () => {
+    overlay.style.display = 'none';
+    modalCall.style.display = 'none';
+  });
+
+  overlay.addEventListener('click', () => {
+    overlay.style.display = 'none';
+    modalCall.style.display = 'none';
   });
 };
 
