@@ -8,8 +8,10 @@ const smoothScroll = () => {
 
   document.addEventListener('scroll', () => {
     if (window.scrollY > elemRect.y) {
+      scrollBtn.style.display = 'block';
       scrollBtn.style.opacity = '1';
     } else {
+      scrollBtn.style.display = 'none';
       scrollBtn.style.opacity = '0';
     }
   });

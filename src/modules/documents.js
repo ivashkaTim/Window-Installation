@@ -12,6 +12,7 @@ const documents = () => {
   imgOverlay.style.alignItems = 'center';
   imgOverlay.style.zIndex = 10;
   imgOverlay.style.display = 'none';
+  bigImage.style.maxHeight = '80%';
 
   imgOverlay.appendChild(bigImage);
 

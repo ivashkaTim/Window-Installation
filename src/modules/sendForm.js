@@ -5,6 +5,21 @@ const sendForm = ({ formId, someElem = [] }) => {
   const inputUserName = document.querySelectorAll('.user-name');
   const inputUserPhone = document.querySelectorAll('.user-phone');
 
+  const validate = () => {
+    let success = false;
+    const inputUserNameForm = form.querySelector('.user-name');
+    const inputUserPhoneForm = form.querySelector('.user-phone');
+
+    if (
+      inputUserNameForm.value.length > 2 &&
+      inputUserPhoneForm.value.length > 6
+    ) {
+      success = true;
+    }
+
+    return success;
+  };
+
   const sendData = (data) => {
     return fetch('https://jsonplaceholder.typicode.com/posts', {
       method: 'POST',
@@ -36,11 +51,15 @@ const sendForm = ({ formId, someElem = [] }) => {
       });
     } catch (error) {}
 
-    sendData(formBody).then((data) => {
-      formElements.forEach((input) => {
-        input.value = '';
+    if (validate()) {
+      sendData(formBody).then((data) => {
+        formElements.forEach((input) => {
+          input.value = '';
+        });
       });
-    });
+    } else {
+      alert('false');
+    }
   };
 
   try {
