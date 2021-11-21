@@ -6,7 +6,7 @@ import modalCall from './modules/modalCall';
 import servicesModal from './modules/servicesModal';
 import documents from './modules/documents';
 import smoothScroll from './modules/smoothScroll';
-import sendFormOrder from './modules/sendFormOrder';
+import sendForm from './modules/sendForm';
 
 timer('25 november 2021');
 calculator();
@@ -16,7 +16,7 @@ modalCall();
 servicesModal();
 documents();
 smoothScroll();
-sendFormOrder({
+sendForm({
   formId: '.action-form',
   someElem: [
     {
@@ -25,7 +25,7 @@ sendFormOrder({
     },
   ],
 });
-sendFormOrder({
+sendForm({
   formId: '.action-form2',
   someElem: [
     {

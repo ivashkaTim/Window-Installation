@@ -1,6 +1,6 @@
 import { checkInputsRegExp } from './helpers';
 
-const sendFormOrder = ({ formId, someElem = [] }) => {
+const sendForm = ({ formId, someElem = [] }) => {
   const form = document.querySelector(formId);
   const inputUserName = document.querySelectorAll('.user-name');
   const inputUserPhone = document.querySelectorAll('.user-phone');
@@ -55,4 +55,4 @@ const sendFormOrder = ({ formId, someElem = [] }) => {
   checkInputsRegExp(inputUserName, /[^a-zA-Zа-яА-яёЁ\s]+$/g);
 };
 
-export default sendFormOrder;
+export default sendForm;
