@@ -10,6 +10,14 @@ const sendForm = ({ formId, someElem = [] }) => {
     const inputUserNameForm = form.querySelector('.user-name');
     const inputUserPhoneForm = form.querySelector('.user-phone');
 
+    if (inputUserNameForm.value.length < 2) {
+      inputUserNameForm.style.border = '1px solid red';
+    }
+
+    if (inputUserPhoneForm.value.length < 6) {
+      inputUserPhoneForm.style.border = '1px solid red';
+    }
+
     if (
       inputUserNameForm.value.length > 2 &&
       inputUserPhoneForm.value.length > 6
@@ -55,10 +63,9 @@ const sendForm = ({ formId, someElem = [] }) => {
       sendData(formBody).then((data) => {
         formElements.forEach((input) => {
           input.value = '';
+          input.style.border = '1px solid #dfdfdf';
         });
       });
-    } else {
-      alert('false');
     }
   };
 
