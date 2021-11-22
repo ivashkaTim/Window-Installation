@@ -1,22 +1,16 @@
 const smoothScroll = () => {
   const body = document.querySelector('body');
   const scrollBtn = document.querySelector('.smooth-scroll');
-  const blockBenefits = document.getElementById('benefits');
-
-  const elemRect = blockBenefits.getBoundingClientRect();
-  scrollBtn.style.opacity = '0';
 
   document.addEventListener('scroll', () => {
-    if (window.scrollY > elemRect.y) {
+    if (window.scrollY > 500) {
       scrollBtn.style.display = 'block';
-      scrollBtn.style.opacity = '1';
-    } else {
+    } else if (window.scrollY < 500) {
       scrollBtn.style.display = 'none';
-      scrollBtn.style.opacity = '0';
     }
   });
 
-  scrollBtn.addEventListener('click', () => {
+  scrollBtn.addEventListener('click', (e) => {
     body.scrollIntoView({
       block: 'center',
       behavior: 'smooth',
