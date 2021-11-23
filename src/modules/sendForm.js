@@ -11,11 +11,11 @@ const sendForm = ({ formId, someElem = [] }) => {
     const inputUserPhoneForm = form.querySelector('.user-phone');
 
     if (inputUserNameForm.value.length < 2) {
-      inputUserNameForm.style.border = '1px solid red';
+      inputUserNameForm.classList.add('invalid');
     }
 
     if (inputUserPhoneForm.value.length < 6) {
-      inputUserPhoneForm.style.border = '1px solid red';
+      inputUserPhoneForm.classList.add('invalid');
     }
 
     if (
@@ -63,7 +63,6 @@ const sendForm = ({ formId, someElem = [] }) => {
       sendData(formBody).then((data) => {
         formElements.forEach((input) => {
           input.value = '';
-          input.style.border = '1px solid #dfdfdf';
         });
       });
     }
@@ -72,8 +71,13 @@ const sendForm = ({ formId, someElem = [] }) => {
   try {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-
       submitForm();
+    });
+
+    form.addEventListener('click', (e) => {
+      if (e.target.closest('.user-name') || e.target.closest('.user-phone')) {
+        e.target.classList.remove('invalid');
+      }
     });
   } catch (error) {}
 

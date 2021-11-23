@@ -28,6 +28,7 @@ modalCall();
 servicesModal();
 documents();
 smoothScroll();
+
 sendForm({
   formId: '.action-form',
   someElem: [
@@ -37,6 +38,7 @@ sendForm({
     },
   ],
 });
+
 sendForm({
   formId: '.action-form2',
   someElem: [
