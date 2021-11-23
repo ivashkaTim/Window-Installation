@@ -1658,10 +1658,13 @@ input.error {
 }
 
 .smooth-scroll {
+  display: none;
   position: fixed;
   right: 25px;
   bottom: 25px;
   transform: rotate(90deg);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 
 @media (min-width: 576px) {
@@ -1676,4 +1679,19 @@ input.error {
     width: 100%;
     max-width: 576px;
   }
+}
+.d-none {
+  display: none;
+  opacity: 0;
+}
+
+#services .active,
+#benefits .active {
+  display: block;
+  opacity: 1;
+  margin: 0 auto;
+}
+
+.invalid {
+  border-color: red;
 }
