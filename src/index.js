@@ -6,8 +6,9 @@ import servicesModal from './modules/servicesModal';
 import documents from './modules/documents';
 import smoothScroll from './modules/smoothScroll';
 import sendForm from './modules/sendForm';
+import comments from './modules/comments';
 
-timer('25 november 2021');
+timer('27 november 2021');
 calculator();
 slider(
   'benefits',
@@ -48,3 +49,5 @@ sendForm({
     },
   ],
 });
+
+comments();
