@@ -18,7 +18,9 @@ const comments = () => {
       }
 
       const commentItemsAll = document.querySelectorAll('.comment-item');
-      commentItemsAll[0].remove();
+      if (commentItemsAll.length > 2) {
+        commentItemsAll[0].remove();
+      }
 
       const commentItem = document.createElement('div');
       commentItem.classList.add('review-margin-bottom', 'row', 'comment-item');

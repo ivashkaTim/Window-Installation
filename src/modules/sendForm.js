@@ -2,7 +2,6 @@ import { checkInputsRegExp } from './helpers';
 
 const sendForm = ({ formId, someElem = [] }) => {
   const form = document.querySelector(formId);
-  console.log(form);
   const inputUserName = document.querySelectorAll('.user-name');
   const inputUserPhone = document.querySelectorAll('.user-phone');
 
