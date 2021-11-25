@@ -50,4 +50,24 @@ sendForm({
   ],
 });
 
+sendForm({
+  formId: '.callback-form1',
+  someElem: [
+    {
+      type: 'input',
+      id: 'calc-total',
+    },
+  ],
+});
+
+sendForm({
+  formId: '.application-form',
+  someElem: [
+    {
+      type: 'input',
+      id: 'calc-total',
+    },
+  ],
+});
+
 // comments();

@@ -2,6 +2,7 @@ import { checkInputsRegExp } from './helpers';
 
 const sendForm = ({ formId, someElem = [] }) => {
   const form = document.querySelector(formId);
+  console.log(form);
   const inputUserName = document.querySelectorAll('.user-name');
   const inputUserPhone = document.querySelectorAll('.user-phone');
 
@@ -19,8 +20,8 @@ const sendForm = ({ formId, someElem = [] }) => {
     }
 
     if (
-      inputUserNameForm.value.length > 2 &&
-      inputUserPhoneForm.value.length > 6
+      inputUserNameForm.value.length >= 2 &&
+      inputUserPhoneForm.value.length >= 6
     ) {
       success = true;
     }
