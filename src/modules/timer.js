@@ -5,17 +5,17 @@ const timer = (deadline) => {
   const timerSeconds = document.querySelectorAll('.seconds');
 
   const getTimeRemaining = () => {
-    let dateStop = new Date(deadline).getTime();
-    let dateNow = new Date().getTime();
-    let timeRemaining = (dateStop - dateNow) / 1000;
-    let days = Math.floor(timeRemaining / 60 / 60 / 24);
-    let hours = Math.floor((timeRemaining / 60 / 60) % 24);
-    let minutes = Math.floor((timeRemaining / 60) % 60);
-    let seconds = Math.floor(timeRemaining % 60);
+    const dateStop = new Date(deadline).getTime();
+    const dateNow = new Date().getTime();
+    const timeRemaining = (dateStop - dateNow) / 1000;
+    const days = Math.floor(timeRemaining / 60 / 60 / 24);
+    const hours = Math.floor((timeRemaining / 60 / 60) % 24);
+    const minutes = Math.floor((timeRemaining / 60) % 60);
+    const seconds = Math.floor(timeRemaining % 60);
     return { timeRemaining, days, hours, minutes, seconds };
   };
   const updateClock = () => {
-    let getTime = getTimeRemaining();
+    const getTime = getTimeRemaining();
     const getZero = (num) => {
       if (num >= 0 && num < 10) {
         return '0' + num;
@@ -36,7 +36,7 @@ const timer = (deadline) => {
     addTimer(timerSeconds, getTime.seconds);
   };
   const startTimer = () => {
-    let getTime = getTimeRemaining();
+    const getTime = getTimeRemaining();
     if (getTime.timeRemaining > 0) {
       setInterval(updateClock, 1000);
     }
