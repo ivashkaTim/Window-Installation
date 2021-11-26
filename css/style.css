@@ -699,6 +699,9 @@ p.services-image_mobile {
 .review-orange {
   background-color: #ffb135;
 }
+.review-blue {
+  background-color: #4438f0;
+}
 .review-arrow:after {
   content: '';
   position: absolute;

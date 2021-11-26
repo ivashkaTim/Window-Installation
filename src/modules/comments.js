@@ -12,6 +12,7 @@ const comments = () => {
 
   const updateComents = (arr) => {
     let i = 0;
+    let j = 0;
     setInterval(() => {
       if (i > arr.length - 1) {
         i = 0;
@@ -20,6 +21,16 @@ const comments = () => {
       const commentItemsAll = document.querySelectorAll('.comment-item');
       if (commentItemsAll.length > 2) {
         commentItemsAll[0].remove();
+      }
+
+      const divClassComment = [
+        'review-gray review-arrow review-arrow-right',
+        'review-green review-arrow review-arrow-left',
+        'review-orange review-arrow review-arrow-left',
+      ];
+
+      if (j > divClassComment.length - 1) {
+        j = 0;
       }
 
       const commentItem = document.createElement('div');
@@ -32,14 +43,14 @@ const comments = () => {
         '</div>' +
         '</div>' +
         '<div class="col-xs-9 col-sm-9">' +
-        '<div class="review-inner review-green review-arrow review-arrow-left">' +
+        `<div class="review-inner ${divClassComment[j]}">` +
         `<p class="text-normal">${arr[i].author}</p>` +
         `<p>${arr[i].comment}</p>` +
         '</div>' +
         '</div>';
-
+      j++;
       i++;
-    }, 5000);
+    }, 2000);
   };
   getComments();
 };
