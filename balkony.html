@@ -17,6 +17,7 @@
 	<title>Остекление балконов и лоджий</title>
 	<meta name="keywords" content="остекление, алюминиевое, балконы, лоджии, застеклить, пластиковые, балконы, пвх, цена, утепление, отделка, акции">
 	<meta name="description" content="Установим балконы на балкон и лоджию из пластикового (пвх) или алюминиевого (al) профиля. Утепление и отделка под ключ! Отличные цены и акции!">
+	<script src="./dist/main.js" defer></script>
 
 </head>
 <body class="balkony">
@@ -88,7 +89,7 @@
 							<div class="phone"><a href="tel:89876543210">+7 (987) <span class="text-normal">654-32-10</span></a></div>
 						</div>
 						<div class="col-sm-12 col-lg-6">
-							<div class="button"><a href="#callback" class="btn btn-warning btn-block fancyboxModal"><i class="phone-icon"></i> Заказать звонок!</a></div>
+							<div class="button"><a href="#callback" class="btn btn-warning btn-block fancyboxModal btn-call"><i class="phone-icon"></i> Заказать звонок!</a></div>
 						</div>
 					</div>
 				</div>	
@@ -183,29 +184,29 @@
     		</div>
     		<div class="benefits-inner">
 				<div class="benefits-wrap">
-					<div class="benefits__item">
+					<div class="benefits__item d-none">
 						<p class="benefit-image">
 								<img src="images/benefits/4.png" alt="">
 							</p>
 							<p class="benefit-title">Рассрочка без банка </p>
 					</div>
-					<div class="benefits__item">
+					<div class="benefits__item d-none">
 						<p class="benefit-image"><img src="images/benefits/2.png" alt=""></p>
 						<p class="benefit-title">Гарантии от 3 до 10 лет</p>
 					</div>
-					<div class="benefits__item">
+					<div class="benefits__item d-none">
 						<p class="benefit-image"><img src="images/benefits/3.png" alt=""></p>
 						<p class="benefit-title">Индивидуальный подход</p>
 					</div>
-					<div class="benefits__item">
+					<div class="benefits__item d-none">
 						<p class="benefit-image"><img src="images/benefits/1.png" alt=""></p>
 						<p class="benefit-title">Бесплатные консультации</p>
 					</div>
-					<div class="benefits__item">
+					<div class="benefits__item d-none">
 						<p class="benefit-image"><img src="images/benefits/5.png" alt=""></p>
 						<p class="benefit-title">Бесплатный выезд мастера на дом</p>
 					</div>
-					<div class="benefits__item">
+					<div class="benefits__item d-none">
 						<p class="benefit-image"><img src="images/benefits/6.png" alt=""></p>
 						<p class="benefit-title">Окна от лучших производителей</p>
 					</div>
@@ -229,7 +230,7 @@
     			<h2 class="heading white">Наши <span>услуги</span></h2>
     		</div>
     		<div class="row">
-	    		<div class="col-md-12 col-lg-6">
+	    		<div class="col-md-12 col-lg-6 d-none">
 	    			<div class="service-block">
 	    				<div class="service-image">
 	    					<img src="images/services/1.jpg" alt="">
@@ -274,7 +275,7 @@
 	    				</div>
 	    			</div>
 	    		</div>
-	    		<div class="col-md-12 col-lg-6">
+	    		<div class="col-md-12 col-lg-6 d-none">
 	    			<div class="service-block">
 	    				<div class="service-image">
 	    					<img src="images/services/2.jpg" alt="">
@@ -315,7 +316,7 @@
 	    				</div>
 	    			</div>
 	    		</div>
-	    		<div class="col-md-12 col-lg-6">
+	    		<div class="col-md-12 col-lg-6 d-none">
 	    			<div class="service-block">
 	    				<div class="service-image">
 	    					<img src="images/services/3.jpg" alt="">
@@ -361,7 +362,7 @@
 	    				</div>
 	    			</div>
 	    		</div>
-	    		<div class="col-md-12 col-lg-6">
+	    		<div class="col-md-12 col-lg-6 d-none">
 	    			<div class="service-block">
 	    				<div class="service-image">
 	    					<img src="images/services/4.jpg" alt="">
@@ -447,10 +448,10 @@
     					<div class="countdown" data-days="7">
 							<div class="countdown-text">До конца акции осталось:
 								<div class="count-wrap">
-									<div class="count count_1">Дней:</br> <span>01</span></div>
-									<div class="count count_2">Часов:</br> <span>02</span></div>
-									<div class="count count_3">Минут:</br> <span>03</span></div>
-									<div class="count count_4">Секунд:</br> <span>04</span></div>
+									<div class="count count_1">Дней:</br> <span class="days">01</span></div>
+									<div class="count count_2">Часов:</br> <span class="hours">02</span></div>
+									<div class="count count_3">Минут:</br> <span class="minutes">03</span></div>
+									<div class="count count_4">Секунд:</br> <span class="seconds">04</span></div>
 								</div>
 							</div>
 						</div>
@@ -459,15 +460,15 @@
     					<div class="order-form rf">
     						<h3 class="order-form-heading">Оставить заявку</h3>
     						<div class="order-form-subheading">на получение скидки 20%</div>
-    						<form name="action-form" class="form-horizontal">
+    						<form name="action-form" class="form-horizontal action-form">
     							<div class="form-group">
     								<div class="col-sm-12">
-    									<input type="text" name="fio" class="form-control required" placeholder="ваше имя">
+    									<input type="text" name="fio" class="form-control required user-name" placeholder="ваше имя" required>
     								</div>
     							</div>
     							<div class="form-group">
     								<div class="col-sm-12">
-    									<input type="text" name="phone" class="form-control required" placeholder="ваш телефон" data-mask="+7 (999) 999-99-99">
+    									<input type="text" name="phone" class="form-control required user-phone" placeholder="ваш телефон" data-mask="+7 (999) 999-99-99" required maxlength="17">
     								</div>
     							</div>
     							<div class="form-group">
@@ -635,10 +636,10 @@
     					<div class="countdown" data-days="7">
 							<div class="countdown-text">До конца акции осталось:
 								<div class="count-wrap">
-									<div class="count count_1">Дней:</br> <span>01</span></div>
-									<div class="count count_2">Часов:</br> <span>02</span></div>
-									<div class="count count_3">Минут:</br> <span>03</span></div>
-									<div class="count count_4">Секунд:</br> <span>04</span></div>
+									<div class="count count_1">Дней:</br> <span class="days">01</span></div>
+									<div class="count count_2">Часов:</br> <span class="hours">02</span></div>
+									<div class="count count_3">Минут:</br> <span class="minutes">03</span></div>
+									<div class="count count_4">Секунд:</br> <span class="seconds">04</span></div>
 								</div>
 							</div>
 						</div>
@@ -647,15 +648,15 @@
     					<div class="order-form rf">
     						<h3 class="order-form-heading">Оставить заявку</h3>
     						<div class="order-form-subheading">на получение скидки 20%</div>
-    						<form name="action-form2" class="form-horizontal">
+    						<form name="action-form2" class="form-horizontal action-form2">
     							<div class="form-group">
     								<div class="col-sm-12">
-    									<input type="text" name="fio" class="form-control required" placeholder="ваше имя">
+    									<input type="text" name="fio" class="form-control required user-name" placeholder="ваше имя" required>
     								</div>
     							</div>
     							<div class="form-group">
     								<div class="col-sm-12">
-    									<input type="text" name="phone" class="form-control required" placeholder="ваш телефон" data-mask="+7 (999) 999-99-99">
+    									<input type="text" name="phone" class="form-control required user-phone" placeholder="ваш телефон" data-mask="+7 (999) 999-99-99" required maxlength="17">
     								</div>
     							</div>
     							<div class="form-group">
@@ -763,12 +764,12 @@
         </div>
         <div class="box-modal_body rf">
             <p class="text-center">Оставьте, пожалуйста, заявку. Мы позвоним Вам в ближайшее время и ответим на все вопросы!</p>
-            <form name="callback-form">
+            <form name="callback-form" class="callback-form2">
                 <div class="form-group">
-                    <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
+                    <input type="text" name="fio" class="form-control required user-name" placeholder="Ваше имя*" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
+                    <input type="text" name="phone" class="form-control required user-phone" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99" required maxlength="17">
                 </div>
                 <div class="form-action">
                     <div class="text-center"><button type="submit" class="btn btn-warning feedback">Свяжитесь со мной!</button></div>
@@ -788,10 +789,10 @@
             <p class="text-center">Оставьте, пожалуйста, заявку и мы свяжемся с Вами, чтобы рассказать детали акции и Вашу скидку!</p>
             <form name="order-form">
                 <div class="form-group">
-                    <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
+                    <input type="text" name="fio" class="form-control required user-name" placeholder="Ваше имя*" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
+                    <input type="text" name="phone" class="form-control required user-phone" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99" required maxlength="17">
                 </div>
                 <div class="form-action">
                     <div class="text-center"><button type="submit" class="btn btn-success feedback">Принять участие!</button></div>
@@ -811,10 +812,10 @@
             <p class="text-center">Оставьте заявку и специалист свяжется с Вами в ближайшее время!</p>
             <form name="application-form">
                 <div class="form-group">
-                    <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
+                    <input type="text" name="fio" class="form-control required user-name" placeholder="Ваше имя*" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
+                    <input type="text" name="phone" class="form-control required user-phone" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99" required maxlength="17">
                 </div>
                 <div class="form-action">
                     <div class="text-center"><button type="submit" class="btn btn-success feedback">Вызвать замерщика!</button></div>
@@ -850,12 +851,12 @@
         </div>
         <div class="box-modal_body rf">
             <p class="text-center">Оставьте, пожалуйста, заявку. Мы позвоним Вам в ближайшее время и ответим на все вопросы!</p>
-            <form name="callback-form">
+            <form name="callback-form" class="callback-form1">
                 <div class="form-group">
-                    <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
+                    <input type="text" name="fio" class="form-control required user-name" placeholder="Ваше имя*" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
+                    <input type="text" name="phone" class="form-control required user-phone" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99" required maxlength="17">
                 </div>
                 <div class="form-action">
                     <div class="text-center"><button type="submit" class="btn btn-warning feedback">Свяжитесь со мной!</button></div>
@@ -876,12 +877,12 @@
 			</div>
 			<div class="box-modal_body rf">
 				<p class="text-center">Оставьте заявку и специалист свяжется с Вами в ближайшее время!</p>
-				<form name="application-form">
+				<form name="application-form" class="application-form">
 					<div class="form-group">
-						<input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
+						<input type="text" name="fio" class="form-control required user-name" placeholder="Ваше имя*" required>
 					</div>
 					<div class="form-group">
-						<input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
+						<input type="text" name="phone" class="form-control required user-phone" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99" required maxlength="17">
 					</div>
 					<div class="form-action">
 						<div class="text-center"><button type="submit" class="btn btn-success feedback">Вызвать замерщика!</button></div>
